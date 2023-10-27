@@ -32,7 +32,7 @@ We also experimented with BeautifulSoup and requests to scrape the comments sect
 After text preprocessing and cleanup, we created multiple sentiment analyzers for the unlabelled comments on the Salted Tahini Cookie Recipe:
 - We built our own sentiment analyzer. We took each Salted Tahini Cookie Recipe comment and converted it into a word vector using gensim's doc2vec embedding (trained on generic wikipedia text samples). Then we took food.com recipe comments (with star ratings), converted these using gensim's doc2vec embedding, and trained a logistic regression on these food.com recipe comments. Then we applied this model to the Salted Tahini Cookie Recipe comments.
 - We used the basic NLTK Vader sentiment analyzer to derive a compound sentiment score for each comment.
-- We also built an RNN to classify sentiment. Again, we used food.com recipe comments as our training data set, and then we applied this model to the Salted Tahini Cookie Recipe comments. We hand labelled the sentiment on Salted Tahini Cookie Recipe comments to get the accuracy.
+- We also built a two RNNs to classify sentiment. We hand labelled the sentiment on Salted Tahini Cookie Recipe comments. For the first (built by Shirley), we created word vectors and trained simply on our Salted Tahini Cooke Recipe comments. For the second (built by Anila), we used food.com recipe comments as our training data set, and then we applied this model to the Salted Tahini Cookie Recipe comments. 
 
 ## Topic Analysis
 We present preliminary results of n-gram topic modelling to predict useful recipe tips from user-generated comments on the Salted Tahini Cookies recipe. Below, see the most common trigrams and fourgrams in the comments.
